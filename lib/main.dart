@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/layout/home_states.dart';
+import 'package:news_app/layout/layout.dart';
 import 'package:news_app/layout/layout_screen.dart';
 import 'package:news_app/modules/business_screen.dart';
 import 'package:news_app/shared/network/dio__helper.dart';
@@ -28,13 +29,18 @@ class MyApp extends StatelessWidget {
         builder: (context, state) {
           return MaterialApp(
             theme: ThemeData(
+              accentColor: Colors.teal,
               scaffoldBackgroundColor: Colors.white,
               appBarTheme: AppBarTheme(
                 backgroundColor: Colors.white,
               ),
+              tabBarTheme: TabBarTheme(
+                labelColor: Colors.teal[700],
+                unselectedLabelColor: Colors.grey
+              ),
             ),
             debugShowCheckedModeBanner: false,
-            home: MyHomePage(),
+            home: News(),
           );
         },
       ),
