@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/modules/apple_screen.dart';
 import 'package:news_app/modules/business_screen.dart';
+import 'package:news_app/modules/serach_screen.dart';
 import 'package:news_app/modules/street_news_screen.dart';
+import 'package:news_app/shared/components/components.dart';
 
 class News extends StatefulWidget {
   const News({Key? key}) : super(key: key);
@@ -33,6 +35,13 @@ class _NewsState extends State<News> with SingleTickerProviderStateMixin {
           style: TextStyle(
               fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              navigateTo(context, SearchScreen());
+            },
+            icon: Icon(Icons.search,color: Colors.black,),)
+        ],
         bottom: TabBar(
           controller: controller,
           tabs: [

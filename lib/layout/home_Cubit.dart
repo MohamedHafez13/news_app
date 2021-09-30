@@ -84,6 +84,7 @@ class HomeCubit extends Cubit<HomeStates> {
   List<dynamic> search = [];
 
   List<dynamic> searchData( String value) {
+    search = [];
     emit(HomeLoadingSearchNewsState());
     DioHelper.getData(
       url: url1,

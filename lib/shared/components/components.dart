@@ -69,7 +69,9 @@ void navigation(context, widget) => Navigator.push(
 Widget articleItem(List list, BuildContext context) {
   return ListView.builder(
     itemCount: list.length,
-    itemBuilder: (context, index) => buildArticleItem(context, list[index]),
+    itemBuilder: (context, index) => list.length > 0
+        ? buildArticleItem(context, list[index])
+        : Center(child: CircularProgressIndicator()),
   );
 }
 
