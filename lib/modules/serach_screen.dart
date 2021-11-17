@@ -18,7 +18,7 @@ class SearchScreen extends StatelessWidget {
             leading: IconButton(
               icon: Icon(
                 Icons.arrow_back_ios,
-                color: Colors.black,
+                color: Colors.white,
               ),
               onPressed: () {
                 Navigator.of(context).pop();
