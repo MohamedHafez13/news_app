@@ -29,7 +29,7 @@ class HomeCubit extends Cubit<HomeStates> {
   late ArticleModel businessModel;
   List<dynamic> businessNews = [];
 
-  List<dynamic> getBusinessData() {
+   getBusinessData() {
     emit(HomeLoadingBusinessNewsState());
     DioHelper.getData(
       url: url,
